@@ -16,9 +16,9 @@ spec:
         app: leobet
     spec:
       containers:
-      - name: leobet
-        image: harbor.ailabpte.co/desktop/next-sample-dev:e90aedc
-        ports:
-        - containerPort: 5073
+        - name: leobet
+          image: harbor.ailabpte.co/desktop/next-sample-dev:3c7ce2b
+          ports:
+            - containerPort: 5073
       imagePullSecrets:
-      - name: ailab
+        - name: ailab
