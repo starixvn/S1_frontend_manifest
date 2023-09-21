@@ -11,7 +11,8 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - http:
+    - host: "www.nova88pre.click"
+      http:
         paths:
         - path: /
           pathType: Prefix
