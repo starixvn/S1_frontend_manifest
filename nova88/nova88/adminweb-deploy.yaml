@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adminweb-deployment
+  namespace: nova88
+  labels:
+    app: adminweb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adminweb
+  template:
+    metadata:
+      labels:
+        app: adminweb
+    spec:
+      containers:
+      - name: adminweb
+        image: harbor.ailabpte.co/desktop/admin-dev:eeb6c19
+        ports:
+        - containerPort: 5071
+        volumeMounts:
+        - name: admin-conf-volume
+          mountPath: /etc/nginx/conf.d
+      volumes:
+      - name: admin-conf-volume
+        configMap:
+          name: adminweb-configmap
+          items:
+          - key: key-adminconf
+            path: admin.conf
+      imagePullSecrets:
+      - name: ailab
