@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobile-deployment
+  namespace: leobet
+  labels:
+    app: mobile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mobile
+  template:
+    metadata:
+      labels:
+        app: mobile
+    spec:
+      containers:
+        - name: mobile
+          image: harbor.ailabpte.co/mobile/next-nova88-dev:d9094c0
+          ports:
+            - containerPort: 5074
+      imagePullSecrets:
+        - name: ailab
