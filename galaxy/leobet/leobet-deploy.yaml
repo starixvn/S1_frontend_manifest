@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: leobet
-          image: harbor.ailabpte.co/desktop/next-nova88-dev:3c2148b
+          image: harbor.ailabpte.co/desktop/next-nova88-dev:9b2119f
           ports:
             - containerPort: 5073
       imagePullSecrets:
