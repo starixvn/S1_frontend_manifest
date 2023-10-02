@@ -16,19 +16,19 @@ spec:
         app: adminweb
     spec:
       containers:
-      - name: adminweb
-        image: harbor.ailabpte.co/desktop/admin-dev:ce7ad57
-        ports:
-        - containerPort: 5071
-        volumeMounts:
-        - name: admin-conf-volume
-          mountPath: /etc/nginx/conf.d
+        - name: adminweb
+          image: harbor.ailabpte.co/desktop/admin-dev:cfac3ed
+          ports:
+            - containerPort: 5071
+          volumeMounts:
+            - name: admin-conf-volume
+              mountPath: /etc/nginx/conf.d
       volumes:
-      - name: admin-conf-volume
-        configMap:
-          name: adminweb-configmap
-          items:
-          - key: key-adminconf
-            path: admin.conf
+        - name: admin-conf-volume
+          configMap:
+            name: adminweb-configmap
+            items:
+              - key: key-adminconf
+                path: admin.conf
       imagePullSecrets:
-      - name: ailab
+        - name: ailab
