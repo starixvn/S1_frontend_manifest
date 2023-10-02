@@ -1,22 +1,24 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: leobet-ingress
+  name: desktop-ingress
   namespace: leobet
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/load-balancer-name: leobet-next-alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: instance
+    alb.ingress.kubernetes.io/group.name: leobet-next-group
 spec:
   ingressClassName: alb
   rules:
-    - http:
+    - host: "www.aiking88dev.net"
+      http:
         paths:
         - path: /
           pathType: Prefix
           backend:
             service:
-              name: leobet-service
+              name: desktop-service
               port:
                 number: 80
