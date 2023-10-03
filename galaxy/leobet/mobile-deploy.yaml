@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mobile
-          image: harbor.ailabpte.co/mobile/next-nova88-dev:c77e2a4
+          image: harbor.ailabpte.co/mobile/next-nova88-dev:3bd99e7
           ports:
             - containerPort: 5074
       imagePullSecrets:
