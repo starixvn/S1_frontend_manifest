@@ -16,7 +16,7 @@ spec:
     - host: "stage.aiking88dev.net"
       http:
         paths:
-        - path: "/(.+)/entPage"
+        - path: /en/entPage
           pathType: Prefix
           backend:
             service:
