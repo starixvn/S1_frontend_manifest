@@ -30,14 +30,14 @@ spec:
               name: membersite-service
               port:
                 number: 80
-        - path: /en/Cashier/*
+        - path: /en/Cashier
           pathType: Prefix
           backend:
             service:
               name: membersite-service
               port:
                 number: 80
-        - path: /hi/Cashier/*
+        - path: /hi/Cashier
           pathType: Prefix
           backend:
             service:
