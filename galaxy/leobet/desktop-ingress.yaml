@@ -30,7 +30,7 @@ spec:
               name: membersite-service
               port:
                 number: 80
-        - path: /en/Cashier
+        - path: /en/Cashier/DepositReqOnlineBanking
           pathType: Prefix
           backend:
             service:
