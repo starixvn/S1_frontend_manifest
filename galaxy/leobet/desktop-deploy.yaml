@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: desktop
-          image: harbor.ailabpte.co/desktop/next-nova88-dev:52581f6
+          image: harbor.ailabpte.co/desktop/next-nova88-dev:4b582fc
           ports:
             - containerPort: 5073
       imagePullSecrets:
