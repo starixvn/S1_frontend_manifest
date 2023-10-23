@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mobile
-          image: harbor.ailabpte.co/mobile/next-leobet-dev:c5d1075
+          image: harbor.ailabpte.co/mobile/next-leobet-dev:c52fce5
           ports:
             - containerPort: 5074
       imagePullSecrets:
