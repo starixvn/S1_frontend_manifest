@@ -13,8 +13,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: "stage.aiking88dev.net"
-      http:
+    - http:
         paths:
         - path: /en/entPage
           pathType: Prefix
@@ -39,6 +38,13 @@ spec:
                 number: 80
         - path: /hi/Cashier
           pathType: Prefix
+          backend:
+            service:
+              name: membersite-service
+              port:
+                number: 80
+        - path: /api/Site/GetSocialChannel
+          pathType: Exact
           backend:
             service:
               name: membersite-service
