@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: desktop-deployment
+  namespace: leobet
+  labels:
+    app: desktop
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: desktop
+  template:
+    metadata:
+      labels:
+        app: desktop
+    spec:
+      containers:
+        - name: desktop
+          image: harbor.ailabpte.co/desktop/next-leobet-dev:b75f63d
+          ports:
+            - containerPort: 5073
+      imagePullSecrets:
+        - name: ailab
