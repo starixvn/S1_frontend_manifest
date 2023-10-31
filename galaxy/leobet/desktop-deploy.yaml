@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: desktop
-          image: harbor.ailabpte.co/desktop/next-leobet-dev:b75f63d
+          image: harbor.ailabpte.co/desktop/next-leobet-prd:6ac9eaf
           ports:
             - containerPort: 5073
       imagePullSecrets:
