@@ -11,6 +11,16 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
+    - host: "backofficerelease.aiking88.net"
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: adminweb-rls-service
+              port:
+                number: 80
     - host: "backoffice.aiking88.net"
       http:
         paths:

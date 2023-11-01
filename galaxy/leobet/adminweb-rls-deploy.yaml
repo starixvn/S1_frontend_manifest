@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adminweb-rls-deployment
+  namespace: leobet
+  labels:
+    app: adminweb-rls
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adminweb-rls
+  template:
+    metadata:
+      labels:
+        app: adminweb-rls
+    spec:
+      containers:
+        - name: adminweb-rls
+          image: harbor.ailabpte.co/desktop/admin-dev:0370901
+          ports:
+            - containerPort: 5071
+          volumeMounts:
+            - name: admin-conf-volume
+              mountPath: /etc/nginx/conf.d
+      volumes:
+        - name: admin-conf-volume
+          configMap:
+            name: adminweb-configmap
+            items:
+              - key: rls-adminconf
+                path: admin.conf
+      imagePullSecrets:
+        - name: ailab
