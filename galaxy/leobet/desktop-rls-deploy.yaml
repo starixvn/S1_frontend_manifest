@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: desktop-rls
-          image: harbor.ailabpte.co/desktop/next-leobet-prd:615bf01
+          image: harbor.ailabpte.co/desktop/next-leobet-dev:c92fe20
           ports:
             - containerPort: 5073
       imagePullSecrets:
