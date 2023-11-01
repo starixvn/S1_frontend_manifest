@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobile-rls-deployment
+  namespace: leobet
+  labels:
+    app: mobile-rls
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mobile-rls
+  template:
+    metadata:
+      labels:
+        app: mobile-rls
+    spec:
+      containers:
+        - name: mobile-rls
+          image: harbor.ailabpte.co/mobile/next-leobet-prd:615bf01
+          ports:
+            - containerPort: 5074
+      imagePullSecrets:
+        - name: ailab
