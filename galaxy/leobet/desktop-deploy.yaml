@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: desktop
-          image: harbor.ailabpte.co/desktop/next-yashbet-prd:954d479
+          image: harbor.ailabpte.co/desktop/next-yashbet-prd:95d8b89
           ports:
             - containerPort: 5073
       imagePullSecrets:
