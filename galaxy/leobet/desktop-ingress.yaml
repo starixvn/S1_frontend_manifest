@@ -58,6 +58,16 @@ spec:
               name: desktop-rls-service
               port:
                 number: 80
+    - host: release.yashbet.com
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: desktop-rls-service
+              port:
+                number: 80
     - http:
         paths:
         - path: /en/entPage
