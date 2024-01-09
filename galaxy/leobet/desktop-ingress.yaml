@@ -61,6 +61,41 @@ spec:
     - host: release.yashbet.com
       http:
         paths:
+        - path: /en/entPage
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /hi/entPage
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /en/Cashier
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /hi/Cashier
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /api/Site/GetSocialChannel
+          pathType: Exact
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
         - path: /
           pathType: Prefix
           backend:
