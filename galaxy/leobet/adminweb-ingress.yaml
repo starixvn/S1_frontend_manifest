@@ -21,7 +21,27 @@ spec:
               name: adminweb-rls-service
               port:
                 number: 80
+    - host: "backofficerelease.yashbet.com"
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: adminweb-rls-service
+              port:
+                number: 80
     - host: "backoffice.aiking88.net"
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: adminweb-service
+              port:
+                number: 80
+    - host: "backoffice.yashbet.com"
       http:
         paths:
         - path: /
