@@ -12,7 +12,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: release.leoking88.net
+    - host: mrelease.leoking88.net
       http:
         paths:
         - path: /en/entPage
