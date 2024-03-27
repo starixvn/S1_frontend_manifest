@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: adminweb
-          image: harbor.ailabpte.co/desktop/admin-dev:1b205da
+          image: harbor.ailabpte.co/desktop/admin-dev:3bed4af
           ports:
             - containerPort: 5071
           volumeMounts:
