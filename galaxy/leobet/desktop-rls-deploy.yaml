@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: desktop-rls
-          image: harbor.ailabpte.co/desktop/next-yashbet-rls:e26d52a
+          image: harbor.ailabpte.co/desktop/next-yashbet-rls:d9fba36
           ports:
             - containerPort: 5073
       imagePullSecrets:
