@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mobile
-          image: harbor.ailabpte.co/mobile/next-yashbet-prd:da7add5
+          image: harbor.ailabpte.co/mobile/next-yashbet-prd:86a45aa
           ports:
             - containerPort: 5074
       imagePullSecrets:
