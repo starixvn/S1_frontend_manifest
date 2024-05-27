@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: adminweb-rls
-          image: harbor.ailabpte.co/desktop/admin-rls:d36718d
+          image: harbor.ailabpte.co/desktop/admin-rls:184ba34
           ports:
             - containerPort: 5071
           volumeMounts:
