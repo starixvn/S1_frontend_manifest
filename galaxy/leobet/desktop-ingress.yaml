@@ -10,10 +10,13 @@ metadata:
     alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/group.name: leobet-next-group
     alb.ingress.kubernetes.io/healthcheck-path: /health
+    alb.ingress.kubernetes.io/host: |
+      release.yashbet.com,
+      release.leoking88.net
 spec:
   ingressClassName: alb
   rules:
-    - host: release.yashbet.com
+    - host: "*"
       http:
         paths:
         - path: /en/entPage
