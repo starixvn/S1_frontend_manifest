@@ -8,12 +8,57 @@ metadata:
     alb.ingress.kubernetes.io/load-balancer-name: leobet-next-alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: instance
-    #alb.ingress.kubernetes.io/group.name: leobet-next-group
+    alb.ingress.kubernetes.io/group.name: leobet-next-group
     alb.ingress.kubernetes.io/healthcheck-path: /health
 spec:
   ingressClassName: alb
   rules:
-    - host: ["release.leoking88.net", "release.yashbet.com", "release.yash-bet.com"]
+    - host: release.leoking88.net
+      http:
+        paths:
+        - path: /en/entPage
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /hi/entPage
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /en/Cashier
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /hi/Cashier
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /api/Site/GetSocialChannel
+          pathType: Exact
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: desktop-rls-service
+              port:
+                number: 80
+    - host: release.yashbet.com
       http:
         paths:
         - path: /en/entPage
