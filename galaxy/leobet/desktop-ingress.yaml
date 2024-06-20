@@ -13,9 +13,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: 
-      - release.yashbet.com
-      - release.leoking88.net
+    - host: release.yashbet.com
       http:
         paths:
         - path: /en/entPage
