@@ -10,7 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/group.name: leobet-next-group
     alb.ingress.kubernetes.io/healthcheck-path: /health
-    alb.ingress.kubernetes.io/security-groups: sg-05afb779db5193e16,sg-01ced2447ca7177e8,sg-0bcf4a669e5cafc79
+    alb.ingress.kubernetes.io/security-groups: sg-05afb779db5193e16,sg-01ced2447ca7177e8
     alb.ingress.kubernetes.io/load-balancer-attributes: deletion_protection.enabled=true
 spec:
   ingressClassName: alb
