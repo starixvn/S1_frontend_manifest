@@ -30,6 +30,13 @@ spec:
               name: membersite-rls-service
               port:
                 number: 80
+        - path: /bd/entPage
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
         - path: /en/Cashier
           pathType: Prefix
           backend:
@@ -38,6 +45,13 @@ spec:
               port:
                 number: 80
         - path: /hi/Cashier
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-rls-service
+              port:
+                number: 80
+        - path: /bd/Cashier
           pathType: Prefix
           backend:
             service:
@@ -74,6 +88,13 @@ spec:
               name: membersite-service
               port:
                 number: 80
+        - path: /bd/entPage
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-service
+              port:
+                number: 80
         - path: /en/Cashier
           pathType: Prefix
           backend:
@@ -82,6 +103,13 @@ spec:
               port:
                 number: 80
         - path: /hi/Cashier
+          pathType: Prefix
+          backend:
+            service:
+              name: membersite-service
+              port:
+                number: 80
+        - path: /bd/Cashier
           pathType: Prefix
           backend:
             service:
